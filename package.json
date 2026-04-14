@@ -1,0 +1,14 @@
+{
+  "name": "blackpulse-ai-presentation",
+  "private": true,
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build --base /intro/",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^52.14.2",
+    "@slidev/theme-default": "latest"
+  },
+  "devDependencies": {}
+}

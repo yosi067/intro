@@ -1,0 +1,143 @@
+/* === BlackPulse AI — Global Styles === */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  --slidev-theme-primary: #34d399;
+  --slidev-theme-bg: #0b0e14;
+  --color-emerald: #34d399;
+  --color-cyan: #22d3ee;
+  --color-violet: #a78bfa;
+}
+
+/* Base slide styling */
+.slidev-layout {
+  background-color: #0b0e14 !important;
+  color: #e5e7eb;
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Code blocks use JetBrains Mono */
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace !important;
+}
+
+/* Background grid pattern */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Radial gradient helper */
+.bg-gradient-radial {
+  background: radial-gradient(ellipse at center, var(--tw-gradient-from), var(--tw-gradient-to));
+}
+
+/* Progress bar at bottom */
+.slidev-progress {
+  height: 2px !important;
+  background: linear-gradient(90deg, #34d399, #22d3ee, #a78bfa) !important;
+}
+
+/* Navigation styling */
+.slidev-nav {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+.slidev-nav:hover {
+  opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 2px;
+}
+
+/* Smooth v-click transitions */
+.slidev-vclick-target {
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.slidev-vclick-hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+/* Pulse animation for status dots */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Slide transition overrides */
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-up-enter-active,
+.slide-up-leave-active,
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* === Auto-fit: prevent content from being clipped === */
+.slidev-layout {
+  overflow: visible !important;
+}
+
+/* Ensure slides container allows full content */
+.slidev-page > .slidev-layout {
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+  box-sizing: border-box !important;
+}
+
+/* Scale down content-heavy slides to fit viewport */
+.slide-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+/* Make the slide wrapper respect content size */
+#slide-content > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Reduce spacing in dense slides to prevent clipping */
+.slidev-page .space-y-8 { gap: clamp(0.75rem, 2vh, 2rem); }
+.slidev-page .space-y-6 { gap: clamp(0.5rem, 1.5vh, 1.5rem); }
+.slidev-page .mt-8 { margin-top: clamp(0.75rem, 2vh, 2rem); }
+.slidev-page .mt-6 { margin-top: clamp(0.5rem, 1.5vh, 1.5rem); }
+.slidev-page .p-6 { padding: clamp(0.75rem, 1.5vh, 1.5rem); }
+.slidev-page .p-5 { padding: clamp(0.625rem, 1.25vh, 1.25rem); }
+.slidev-page .gap-8 { gap: clamp(0.75rem, 2vh, 2rem); }
+.slidev-page .pt-6 { padding-top: clamp(0.5rem, 1.5vh, 1.5rem); }
+
+/* Title responsive sizing */
+.slidev-page h2.text-4xl {
+  font-size: clamp(1.5rem, 3.5vh, 2.25rem);
+}
+
+/* Shrink grid cards on tight viewports */
+@media (max-height: 700px) {
+  .slidev-page .grid { gap: 0.5rem !important; }
+  .slidev-page .p-5, .slidev-page .p-6 { padding: 0.625rem !important; }
+  .slidev-page .space-y-3 > * + * { margin-top: 0.375rem; }
+  .slidev-page .text-sm { font-size: 0.75rem; }
+  .slidev-page .text-xs { font-size: 0.65rem; }
+}

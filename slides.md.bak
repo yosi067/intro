@@ -1,0 +1,364 @@
+---
+theme: default
+title: BlackPulse AI — 次世代伺服器高頻遙測監控解決方案
+info: |
+  Senior Technical Manager Interview Presentation
+  BlackPulse AI: Next-Gen Server High-Frequency Telemetry Monitoring
+author: ""
+keywords: BlackPulse,AI,Telemetry,Server,Monitoring
+exportFilename: blackpulse-ai-presentation
+transition: slide-left
+fonts:
+  sans: Inter
+  mono: JetBrains Mono
+---
+
+<!-- Slide 1: Cover -->
+
+<div class="cover-slide h-full w-full flex flex-col justify-center items-center relative overflow-hidden">
+  <!-- Animated background grid -->
+  <div class="absolute inset-0 bg-grid opacity-10"></div>
+
+  <!-- Glowing accent orb -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-radial from-emerald-500/15 to-transparent rounded-full blur-3xl"></div>
+
+  <div class="relative z-10 text-center space-y-8 px-8">
+    <!-- Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/5 text-emerald-400 text-sm font-mono tracking-wider">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+      SYSTEM ONLINE
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-5xl md:text-7xl font-bold leading-tight tracking-tight">
+      <span class="text-white">BlackPulse</span>
+      <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> AI</span>
+    </h1>
+
+    <p class="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+      次世代伺服器高頻遙測監控解決方案
+    </p>
+
+    <!-- Stats row -->
+    <div class="flex justify-center gap-12 pt-6">
+      <div class="text-center">
+        <div class="text-3xl font-bold text-emerald-400 font-mono">15+</div>
+        <div class="text-sm text-gray-500 mt-1">年研發深耕</div>
+      </div>
+      <div class="w-px bg-gray-700/50"></div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-cyan-400 font-mono">30+</div>
+        <div class="text-sm text-gray-500 mt-1">人團隊領導</div>
+      </div>
+      <div class="w-px bg-gray-700/50"></div>
+      <div class="text-center">
+        <div class="text-3xl font-bold text-violet-400 font-mono">99.97%</div>
+        <div class="text-sm text-gray-500 mt-1">系統可用性</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom hint -->
+  <div class="absolute bottom-8 text-gray-600 text-xs font-mono tracking-widest animate-bounce">
+    PRESS SPACE →
+  </div>
+</div>
+
+---
+transition: fade
+---
+
+<!-- Slide 2: Skill Matrix -->
+
+<div class="h-full w-full flex flex-col justify-center px-16 relative">
+  <div class="absolute inset-0 bg-grid opacity-5"></div>
+
+  <div class="relative z-10 space-y-8">
+    <!-- Section label -->
+    <div class="font-mono text-emerald-400/60 text-xs tracking-[0.3em] uppercase">
+      Technical Competency
+    </div>
+
+    <h2 class="text-4xl font-bold text-white tracking-tight">
+      技術情境解決能力
+    </h2>
+
+    <p class="text-gray-500 text-lg max-w-xl">
+      針對高頻數據場景，從前端渲染到系統架構的全棧解決方案
+    </p>
+
+    <!-- Skill Table -->
+    <div class="grid grid-cols-1 gap-4 mt-8">
+      <div v-click class="group flex items-stretch rounded-lg border border-gray-800 bg-gray-900/50 hover:border-emerald-500/30 transition-all duration-300">
+        <div class="w-2 bg-emerald-500 rounded-l-lg"></div>
+        <div class="flex-1 p-5 flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-emerald-400 text-sm bg-emerald-500/10 px-2 py-0.5 rounded">Rust / Wasm</span>
+              <span class="text-white font-semibold">高頻數據解碼引擎</span>
+            </div>
+            <p class="text-gray-500 text-sm mt-1">將 BMC IPMI 二進位協議解碼移至 WebAssembly，降低主線程負載 40%</p>
+          </div>
+          <div class="font-mono text-gray-600 text-xs">PERFORMANCE</div>
+        </div>
+      </div>
+
+      <div v-click class="group flex items-stretch rounded-lg border border-gray-800 bg-gray-900/50 hover:border-cyan-500/30 transition-all duration-300">
+        <div class="w-2 bg-cyan-500 rounded-l-lg"></div>
+        <div class="flex-1 p-5 flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-cyan-400 text-sm bg-cyan-500/10 px-2 py-0.5 rounded">WebSocket</span>
+              <span class="text-white font-semibold">即時遙測數據串流</span>
+            </div>
+            <p class="text-gray-500 text-sm mt-1">自動重連、背壓控制、Binary Frame 傳輸，支援 10K+ 感測器同時監控</p>
+          </div>
+          <div class="font-mono text-gray-600 text-xs">REAL-TIME</div>
+        </div>
+      </div>
+
+      <div v-click class="group flex items-stretch rounded-lg border border-gray-800 bg-gray-900/50 hover:border-violet-500/30 transition-all duration-300">
+        <div class="w-2 bg-violet-500 rounded-l-lg"></div>
+        <div class="flex-1 p-5 flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-violet-400 text-sm bg-violet-500/10 px-2 py-0.5 rounded">Pixi.js</span>
+              <span class="text-white font-semibold">GPU 加速機架視覺化</span>
+            </div>
+            <p class="text-gray-500 text-sm mt-1">Canvas/WebGL 混合渲染 2000+ 節點拓撲圖，支援即時溫度熱力圖與異常閃爍</p>
+          </div>
+          <div class="font-mono text-gray-600 text-xs">RENDERING</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+transition: slide-up
+---
+
+<!-- Slide 3: Architecture — 嵌入互動式團隊配置圖 -->
+
+<div class="h-full w-full flex flex-col justify-center px-16 relative">
+  <div class="absolute inset-0 bg-grid opacity-5"></div>
+
+  <div class="relative z-10 space-y-6">
+    <div class="font-mono text-cyan-400/60 text-xs tracking-[0.3em] uppercase">
+      Organization Architecture
+    </div>
+
+    <h2 class="text-4xl font-bold text-white tracking-tight">
+      研發團隊規模化架構
+    </h2>
+
+    <p class="text-gray-500 max-w-xl">
+      核心基底平台 + 選項化模組開發，實現跨產品線的架構復用
+    </p>
+
+    <!-- 此處嵌入互動式架構圖 React/Vue 組件 -->
+    <div class="mt-4 flex justify-center">
+      <div class="transform scale-90 origin-top">
+        <TeamArchitecture />
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+transition: slide-left
+---
+
+<!-- Slide 4: Team Scaling — Mock Server -->
+
+<div class="h-full w-full flex flex-col justify-center px-16 relative">
+  <div class="absolute inset-0 bg-grid opacity-5"></div>
+
+  <div class="relative z-10 space-y-8">
+    <div class="font-mono text-violet-400/60 text-xs tracking-[0.3em] uppercase">
+      Development Velocity
+    </div>
+
+    <h2 class="text-4xl font-bold text-white tracking-tight">
+      研發週期加速策略
+    </h2>
+
+    <div class="grid grid-cols-2 gap-8 mt-4">
+      <!-- Left: Problem -->
+      <div v-click class="space-y-4">
+        <div class="text-sm font-mono text-red-400/70 tracking-wider">BEFORE</div>
+        <div class="rounded-xl border border-red-500/20 bg-red-500/5 p-6 space-y-3">
+          <div class="flex items-center gap-2 text-red-400">
+            <span class="text-lg">✕</span>
+            <span>前端等待硬體 BMC 韌體就緒</span>
+          </div>
+          <div class="flex items-center gap-2 text-red-400">
+            <span class="text-lg">✕</span>
+            <span>單一 IPMI 通道阻塞整合測試</span>
+          </div>
+          <div class="flex items-center gap-2 text-red-400">
+            <span class="text-lg">✕</span>
+            <span>跨時區協作延遲 2-3 週</span>
+          </div>
+          <div class="border-t border-red-500/10 pt-3 mt-3">
+            <span class="text-gray-500 text-sm">平均整合週期</span>
+            <span class="text-red-400 font-mono text-2xl ml-2">6 週</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Solution -->
+      <div v-click class="space-y-4">
+        <div class="text-sm font-mono text-emerald-400/70 tracking-wider">AFTER — MOCK SERVER</div>
+        <div class="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-6 space-y-3">
+          <div class="flex items-center gap-2 text-emerald-400">
+            <span class="text-lg">✓</span>
+            <span>Node.js Mock BMC 模擬完整協議</span>
+          </div>
+          <div class="flex items-center gap-2 text-emerald-400">
+            <span class="text-lg">✓</span>
+            <span>Playwright E2E 全自動迴歸測試</span>
+          </div>
+          <div class="flex items-center gap-2 text-emerald-400">
+            <span class="text-lg">✓</span>
+            <span>CI/CD Pipeline 每次 PR 自動驗證</span>
+          </div>
+          <div class="border-t border-emerald-500/10 pt-3 mt-3">
+            <span class="text-gray-500 text-sm">平均整合週期</span>
+            <span class="text-emerald-400 font-mono text-2xl ml-2">2 週</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div v-click class="flex justify-center pt-2">
+      <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-emerald-400 font-mono text-sm">
+        <span>研發週期縮短</span>
+        <span class="text-2xl font-bold">66%</span>
+        <span>↑</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+transition: fade
+---
+
+<!-- Slide 5: Quality & AIOps -->
+
+<div class="h-full w-full flex flex-col justify-center px-16 relative">
+  <div class="absolute inset-0 bg-grid opacity-5"></div>
+
+  <div class="relative z-10 space-y-8">
+    <div class="font-mono text-emerald-400/60 text-xs tracking-[0.3em] uppercase">
+      Quality & Intelligence
+    </div>
+
+    <h2 class="text-4xl font-bold text-white tracking-tight">
+      數據驅動的品質治理
+    </h2>
+
+    <!-- Pipeline visualization -->
+    <div class="flex items-center gap-4 mt-8">
+      <div v-click class="flex-1 rounded-xl border border-gray-800 bg-gray-900/60 p-5 text-center space-y-2 hover:border-cyan-500/30 transition-all">
+        <div class="text-3xl">📊</div>
+        <div class="text-white font-semibold text-sm">GA 數據採集</div>
+        <div class="text-gray-500 text-xs">使用者行為追蹤<br/>功能使用率分析</div>
+      </div>
+
+      <div class="text-gray-700 font-mono">→</div>
+
+      <div v-click class="flex-1 rounded-xl border border-gray-800 bg-gray-900/60 p-5 text-center space-y-2 hover:border-violet-500/30 transition-all">
+        <div class="text-3xl">🔍</div>
+        <div class="text-white font-semibold text-sm">Sentry 異常追蹤</div>
+        <div class="text-gray-500 text-xs">運行時錯誤捕獲<br/>Source Map 定位</div>
+      </div>
+
+      <div class="text-gray-700 font-mono">→</div>
+
+      <div v-click class="flex-1 rounded-xl border border-gray-800 bg-gray-900/60 p-5 text-center space-y-2 hover:border-emerald-500/30 transition-all">
+        <div class="text-3xl">🤖</div>
+        <div class="text-white font-semibold text-sm">AI 模式辨識</div>
+        <div class="text-gray-500 text-xs">異常關聯分析<br/>故障模式聚類</div>
+      </div>
+
+      <div class="text-gray-700 font-mono">→</div>
+
+      <div v-click class="flex-1 rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-5 text-center space-y-2">
+        <div class="text-3xl">⚡</div>
+        <div class="text-emerald-400 font-semibold text-sm">預測性維護</div>
+        <div class="text-gray-500 text-xs">提前 48hr 預警<br/>自動化修復建議</div>
+      </div>
+    </div>
+
+    <!-- Bottom insight -->
+    <div v-click class="mt-6 rounded-lg border border-gray-800 bg-gray-900/40 p-5">
+      <div class="flex items-start gap-4">
+        <div class="w-1 h-16 bg-gradient-to-b from-cyan-400 to-emerald-400 rounded-full"></div>
+        <div>
+          <div class="text-white font-semibold">從「被動救火」到「主動預防」</div>
+          <p class="text-gray-500 text-sm mt-1 leading-relaxed">
+            整合 GA + Sentry 數據流，透過時間序列分析辨識伺服器異常模式。
+            當感測器讀數偏離基線 2σ 時，系統自動觸發維護工單 — 在硬體故障發生前 48 小時介入。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+---
+transition: slide-up
+---
+
+<!-- Slide 6: Demo Intro -->
+
+<div class="h-full w-full flex flex-col justify-center items-center relative overflow-hidden">
+  <div class="absolute inset-0 bg-grid opacity-5"></div>
+
+  <!-- Glowing orb -->
+  <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-gradient-radial from-violet-500/10 via-cyan-500/5 to-transparent rounded-full blur-3xl"></div>
+
+  <div class="relative z-10 text-center space-y-8 px-8 max-w-3xl">
+    <div class="font-mono text-violet-400/60 text-xs tracking-[0.3em] uppercase">
+      Live Demo
+    </div>
+
+    <h2 class="text-5xl font-bold text-white tracking-tight leading-tight">
+      軟體定義硬體的
+      <span class="bg-gradient-to-r from-violet-400 to-cyan-400 bg-clip-text text-transparent">未來願景</span>
+    </h2>
+
+    <p class="text-xl text-gray-400 font-light leading-relaxed">
+      當監控軟體不再只是「讀取數據」，<br />
+      而是能「理解數據」並「預測未來」。
+    </p>
+
+    <!-- Demo feature cards -->
+    <div v-click class="grid grid-cols-3 gap-4 mt-8">
+      <div class="rounded-lg border border-gray-800 bg-gray-900/40 p-4 space-y-2">
+        <div class="text-emerald-400 font-mono text-xs">01</div>
+        <div class="text-white text-sm font-semibold">即時遙測儀表板</div>
+        <div class="text-gray-600 text-xs">WebSocket + Pixi.js<br/>2000+ 感測器即時渲染</div>
+      </div>
+      <div class="rounded-lg border border-gray-800 bg-gray-900/40 p-4 space-y-2">
+        <div class="text-cyan-400 font-mono text-xs">02</div>
+        <div class="text-white text-sm font-semibold">異常模式偵測</div>
+        <div class="text-gray-600 text-xs">Rust/Wasm 引擎<br/>毫秒級異常判定</div>
+      </div>
+      <div class="rounded-lg border border-gray-800 bg-gray-900/40 p-4 space-y-2">
+        <div class="text-violet-400 font-mono text-xs">03</div>
+        <div class="text-white text-sm font-semibold">AI 預測性維護</div>
+        <div class="text-gray-600 text-xs">時間序列分析<br/>提前 48hr 故障預警</div>
+      </div>
+    </div>
+
+    <div v-click class="pt-4">
+      <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-violet-500/20 to-cyan-500/20 border border-violet-500/30 text-white font-mono text-sm hover:from-violet-500/30 hover:to-cyan-500/30 transition-all cursor-pointer">
+        <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+        進入 BlackPulse AI 實作展示
+      </div>
+    </div>
+  </div>
+</div>
